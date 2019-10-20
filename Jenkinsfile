@@ -11,7 +11,7 @@ pipeline {
         } 
 		stage('Deploy') {
             steps {
-                bat "copy C:\Users\deeraj.parwani\.jenkins\workspace\JenkinsGettingStarted_master\target\ResourceDetails.war  C:\tomcat6\webapps"
+                bat "copy C:\\Users\\deeraj.parwani\\.jenkins\\workspace\\JenkinsGettingStarted_master\\target\\ResourceDetails.war  C:\\tomcat6\\webapps"
             }
         }
     }
