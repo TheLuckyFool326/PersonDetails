@@ -1,9 +1,8 @@
 pipeline {
     agent {label 'master'}
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                bat "echo Hello from the bat"
                 bat "maven+ --version"  
 				bat "maven+ clean install"
             }
@@ -12,7 +11,8 @@ pipeline {
             steps {
                 bat "copy C:\\Users\\deeraj.parwani\\.jenkins\\workspace\\JenkinsGettingStarted_master\\target\\ResourceDetails.war  C:\\tomcat6\\webapps"
 				bat "chdir"
-				bat "cd/ && cd C:\\tomcat6\\bin"
+				bat "cd C:\\tomcat6\\bin"
+				bat "chdir"
 				bat "catalina start"
             }
         }
