@@ -3,7 +3,6 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                echo "Hello World!"
                 bat "echo Hello from the bat"
                 bat "maven+ --version"  
 				bat "maven+ clean install"
@@ -12,6 +11,9 @@ pipeline {
 		stage('Deploy') {
             steps {
                 bat "copy C:\\Users\\deeraj.parwani\\.jenkins\\workspace\\JenkinsGettingStarted_master\\target\\ResourceDetails.war  C:\\tomcat6\\webapps"
+				bat "chdir"
+				bat "cd/ && cd C:\\tomcat6\\bin"
+				bat "catalina start"
             }
         }
     }
