@@ -45,6 +45,11 @@ private static Map<Integer,Person> persons = new HashMap<Integer,Person>();
 		Gson gson = new Gson();
 		String jsonData = gson.toJson(p);
 		System.out.println("Json Object Data in Spring: " + jsonData);
+		
+		response.addHeader("Access-Control-Allow-Origin", "*");
+		response.addHeader("Access-Control-Allow-Headers", "origin, content-type, accept, authorization");
+		response.addHeader("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE, OPTIONS, HEAD");
+		
 		return jsonData;
 	}
 }
