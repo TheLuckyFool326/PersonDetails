@@ -8,8 +8,6 @@ public class CORSResponseFilter implements ContainerResponseFilter {
 
 	@Override
 	public ContainerResponse filter(ContainerRequest request, ContainerResponse response) {
-		// TODO Auto-generated method stub
-		
 		System.out.println("CORSResponseFilter - Modifying Response");
 		
 		response.getHttpHeaders().add("Access-Control-Allow-Origin", "*");
